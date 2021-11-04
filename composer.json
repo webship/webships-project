@@ -1,0 +1,94 @@
+{
+  "name": "webships/webships-project",
+  "description": "Project template for webships projects with composer",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Webship",
+      "homepage": "https://www.drupal.org/webship",
+      "role": "Volunteer contributions"
+    }
+  ],
+  "support": {
+    "issues": "http://drupal.org/project/issues/webships",
+    "source": "http://cgit.drupalcode.org/webships"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org"
+    },
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "composer/installers": "~2.0",
+    "oomphinc/composer-installers-extender": "~2.0",
+    "drupal/core-composer-scaffold": "~9.0",
+    "drupal/core-project-message": "~9.0",
+    "cweagans/composer-patches": "~1.0",
+    "webships/webships": "1.0.x-dev"
+  },
+  "require-dev": {
+    "drupal/core-dev": "~9.0",
+    "drush/drush": "~10.0"
+  },
+  "config": {
+    "bin-dir": "bin/",
+    "secure-http": false,
+    "preferred-install": {
+      "drupal/core": "dist"
+    }
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/profiles/{$name}": ["type:drupal-profile"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "web/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
+      "web/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "drupal-libraries": {
+      "library-directory": "web/libraries",
+      "libraries": [
+        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"}
+      ]
+    },
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "drupal-core-project-message": {
+      "include-keys": ["homepage", "support"],
+      "post-create-project-cmd-message": [
+        "<bg=blue;fg=white>                                                                                           </>",
+        "<bg=blue;fg=white>       Congratulations, you’ve installed the Webships apps management server               </>",
+        "<bg=blue;fg=white>            from the webships/webships-project template!                                   </>",
+        "<bg=blue;fg=white>                                                                                           </>"
+      ]
+    }
+  }
+}
