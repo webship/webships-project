@@ -17,10 +17,6 @@
     "source": "http://cgit.drupalcode.org/webships"
   },
   "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.org"
-    },
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
