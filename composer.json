@@ -30,7 +30,6 @@
     "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "drupal/core-composer-scaffold": "~9.0",
-    "drupal/core-project-message": "~9.0",
     "cweagans/composer-patches": "~1.0",
     "webships/webships": "1.0.x-dev"
   },
@@ -41,8 +40,15 @@
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
+    "optimize-autoloader": true,
     "preferred-install": {
       "drupal/core": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/core-composer-scaffold": true
     }
   },
   "extra": {
@@ -80,15 +86,6 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
-    },
-    "drupal-core-project-message": {
-      "include-keys": ["homepage", "support"],
-      "post-create-project-cmd-message": [
-        "<bg=blue;fg=white>                                                                                           </>",
-        "<bg=blue;fg=white>       Congratulations, you’ve installed the Webships apps management server               </>",
-        "<bg=blue;fg=white>            from the webships/webships-project template!                                   </>",
-        "<bg=blue;fg=white>                                                                                           </>"
-      ]
     }
   }
 }
