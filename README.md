@@ -1,7 +1,7 @@
-# Webships Project
+# Webships App Store project template
 
-Webships of custom apps gallery server site manager.
- Which the WebApps get the list of apps to be listed in any Webship Drupal site.
+A custom Web apps gallery server site manager.
+ Which list of apps to be listed in any Drupal site using the Project Browser.
 
 To install the dev version of Webships 1.0.x run this command:
 ```
