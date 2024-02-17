@@ -27,10 +27,9 @@
     }
   },
   "require": {
-    "composer/installers": "~2.0",
-    "oomphinc/composer-installers-extender": "~2.0",
-    "drupal/core-composer-scaffold": "~10.0",
-    "cweagans/composer-patches": "~1.0",
+    "composer/installers": "~2",
+    "oomphinc/composer-installers-extender": "~2",
+    "drupal/core-composer-scaffold": "~10",
     "webship/webships": "1.0.x-dev"
   },
   "config": {
