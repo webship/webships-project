@@ -56,6 +56,9 @@ project:
   script:
     - composer require --no-update "drupal/core-recommended:$DRUPAL_CORE"
     - composer update --with-all-dependencies
+    # Swagger UI is installed once, in the folder the API documentation loads.
+    - test "$(composer show --name-only | grep -c swagger-ui)" -eq 1
+    - test -f web/libraries/swagger-ui/dist/swagger-ui-bundle.js
     # Run the Drush PHP script directly: vendor/bin/drush is a shell proxy.
     - export DRUSH="php -d memory_limit=-1 vendor/drush/drush/drush.php"
     # Install the site template from its recipe directory, relative to the Drupal root.

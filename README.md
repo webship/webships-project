@@ -59,7 +59,7 @@ The path is relative to the Drupal root. Use `webships_starter` or `webapi_start
 |---|---|
 | `web/` | Drupal root (core, contrib modules and themes) |
 | `web/profiles/contrib/webships` | The Webships installer |
-| `web/libraries/swagger-ui/dist` | Swagger UI, for the API documentation |
+| `web/libraries/swagger-ui` | Swagger UI (`swagger-api/swagger-ui`): the API documentation loads its `dist` folder |
 | `recipes/webships_starter` | The Webships Starter site template |
 | `recipes/webapi_starter` | The WebAPI Starter site template |
 | `vendor/` | Composer dependencies, Drush |
