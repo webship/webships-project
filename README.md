@@ -20,7 +20,8 @@ end.
 
 ## Create a project
 
-Composer runs inside DDEV, so nothing is needed on your machine but DDEV itself.
+Composer runs inside DDEV, so nothing is needed on your machine but DDEV itself:
+DDEV 1.25 or newer, for PHP 8.5 (DDEV 1.24 does not offer it).
 
 ```shell
 mkdir my-api && cd my-api
@@ -30,7 +31,7 @@ ddev composer create-project drupal/webships_project:~12.0
 ddev restart
 ```
 
-`ddev restart` picks up the `.ddev/config.yaml` the template ships (PHP 8.4,
+`ddev restart` picks up the `.ddev/config.yaml` the template ships (PHP 8.5,
 Node.js 24, MariaDB 10.11), which lands in the project during
 `ddev composer create-project` and replaces the one `ddev config` wrote. The
 project name is not in that file: DDEV takes it from the directory, so the site
@@ -73,11 +74,9 @@ The path is relative to the Drupal root. Use `webships_starter` or `webapi_start
 ## Drupal 12 (beta)
 
 The template installs the latest Drupal 11 by default. It also allows Drupal 12,
-which needs PHP 8.5. To try it, set `php_version: "8.5"` in `.ddev/config.yaml`
-(a DDEV release with PHP 8.5 is needed), then:
+which needs PHP 8.5, the PHP version of the template's DDEV configuration. To try it:
 
 ```shell
-ddev restart
 ddev composer require --no-update drupal/core-recommended:^12 drupal/search:^1
 ddev composer update -W
 ```

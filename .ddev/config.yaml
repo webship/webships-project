@@ -2,7 +2,7 @@
 # The project name defaults to the directory name. See https://docs.ddev.com
 type: drupal
 docroot: web
-php_version: "8.4"
+php_version: "8.5"
 webserver_type: nginx-fpm
 database:
   type: mariadb

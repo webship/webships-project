@@ -15,7 +15,7 @@ include:
       - '/includes/include.drupalci.workflows.yml'
 
 variables:
-  _TARGET_PHP: '8.4'
+  _TARGET_PHP: '8.5'
   DRUPAL_CORE: '11.4.x-dev'
   COMPOSER_NO_INTERACTION: '1'
 
